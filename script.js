@@ -1,5 +1,4 @@
 const newsContainer = document.getElementById('newsContainer');
-const newsBtn1 = document.getElementById('news1');
 const heading = document.getElementById('heading');
 const categoryLinks = document.querySelectorAll('.category-link');
 const pageTitle = document.querySelector('title');
@@ -215,7 +214,7 @@ function getCategoryText(category) {
 
 const country = 'pk';
 let category = 'top';
-const apiKey = window.MY_API_KEY;
+const apiKey = window.API_KEY_2;
 
 
 function updateNews() {
