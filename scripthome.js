@@ -21,7 +21,7 @@ let category2 = 'world';
 let category3 = 'entertainment';
 let category4 = 'technology';
 let category5 = 'sports';
-const apiKey = 'pub_24014699004815b7b4e1318d93e8897183ede';
+const apiKey = window.MY_API_KEY;
 let isLoading = false;
 
 function showLoadingIndicator() {
