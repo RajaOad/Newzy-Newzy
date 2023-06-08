@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - NewzyNewzy.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="news.css" rel="stylesheet">
+<link rel="icon" href="favicon.png">
+  <style>
+    /* Custom CSS styles */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    li, header, h2, h3 {
+      font-family: sans-serif;
+    }
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 4px;
+  background-color: #6c63ff;
+  margin-top: 1rem;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+
+    <nav class="z-50 bg-gradient-to-r from-blue-500 to-purple-500 fixed w-full top-0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex-shrink-0">
+            <span class="text-white logo">Newzy Newzy</span>
+          </div>
+          <div class="lg:hidden">
+            <button id="menuButton" type="button" class="text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 p-2 rounded-md">
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </button>
+          </div>
+          <div class="hidden lg:block">
+    
+            <div class="ml-10 flex items-center space-x-4">
+              
+              <a href="index.html" class="text-white hover:bg-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+
+              <a href="news.html" class="text-white hover:bg-blue-600 px-3 py-2 rounded-md text-sm font-medium">Latest News</a>
+
+              <a href="#developer" class="text-white hover:bg-blue-600 px-3 py-2 rounded-md text-sm font-medium">Developer</a>
+              
+              <a href="#about" class="active text-white hover:bg-blue-600 px-3 py-2 rounded-md text-sm font-medium">About</a>          
+    
+              <!-- Add other category links here -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:hidden hidden pb-4" id="menu">
+        <a href="index.html" class="block text-white hover:bg-blue-600 px-3 py-2 rounded-md text-base font-medium menu-link">Home</a>
+
+        <a href="news.html" class="block text-white hover:bg-blue-600 px-3 py-2 rounded-md text-base font-medium menu-link">Latest News</a>
+        
+        <a href="#about" class="active block text-white hover:bg-blue-600 px-3 py-2 rounded-md text-base font-medium">About</a>
+
+        <a href="#developer" class="block text-white hover:bg-blue-600 px-3 py-2 rounded-md text-base font-medium">Developer</a>
+
+      </div>
+    </nav>
+    
+  </header>
+
+ 
+
+  <div class="container max-w-6xl mx-auto my-8 md:mt-16 py-8 px-4 md:px-0">
+    <section id="about" class="mb-20 md:mb-36 mt-8">
+      <h2 class="section-title text-3xl font-bold text-indigo-600 mb-4">About Us</h2>
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2">
+          <p class="text-lg mb-4 text-gray-700 md:mr-8">Newzy Newzy is your ultimate destination for breaking news and inspiring stories. We strive to provide you with the latest updates, captivating articles, and thought-provoking content that keeps you informed and inspired.</p>
+
+            <p class="text-lg mb-4 text-gray-700 md:mr-8">
+              At Newzy Newzy, we believe in the power of information and its ability to shape the world. We are committed to providing reliable news, promoting transparency, and fostering meaningful conversations. Our goal is to empower individuals with knowledge and inspire positive change in society.
+            </p>
+
+          <ul class="list-disc pl-6">
+            <li class="mb-2">Stay up-to-date with breaking news stories</li>
+            <li class="mb-2">Get in-depth coverage on a wide range of topics</li>
+            <li class="mb-2">Discover articles from various trusted sources</li>
+            <li class="mb-2">Enjoy a seamless reading experience on any device</li>
+          </ul>
+        </div>
+        <div class="md:w-1/2 mt-4 md:mt-0">
+          <img src="https://media.istockphoto.com/id/1425875523/photo/group-of-programmers-and-software-developers-working-on-a-new-project-at-the-office.webp?b=1&s=170667a&w=0&k=20&c=DPS5ORSb3X0CgdrxPJj2IBYzO65ztGJ8u2cByjJtuO0=" alt="Newsroom" class="w-full rounded-lg shadow-md">
+        </div>
+      </div>
+    </section>
+
+    <section id="developer" class="mt-8 mb-20 md:mb-36">
+      <h2 class="section-title text-3xl font-bold text-indigo-600 mb-4">Developer</h2>
+      <div class="dev-section bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg shadow-lg p-8 mt-8">
+        <div class="flex items-center justify-center mb-6">
+          <img src="https://avatars.githubusercontent.com/u/103353840?v=4" alt="Developer" class="w-40 h-40 rounded-full mb-4 border-4 border-white">
+        </div>
+        <div class="text-center">
+          <h2 class="text-3xl font-bold mb-2 text-white">Raja</h2>
+          <p class="text-lg text-gray-200 mb-4">Web Developer</p>
+          <ul class="text-lg text-gray-200">
+            <li><i class="fas fa-envelope mr-2"></i> Email: rajdevatdeveloper@gmail.com</li>
+            <li><i class="fas fa-phone-alt mr-2"></i> Phone: +92 310-3572212</li>
+            <li><i class="fab fa-github mr-2"></i> GitHub: <a href="https://github.com/Rajabegginer" target="_blank" class="underline">github.com/Rajadeveloper</a></li>
+            <li><i class="fab fa-linkedin-in mr-2"></i> LinkedIn: <a href="https://www.linkedin.com/in/rajkumar-oad-316a4b256/" target="_blank" class="underline">linkedin.com/in/rajkumar-oad</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-8 mb-20 md:mb-36">
+      <h2 class="section-title text-3xl font-bold text-indigo-600 mb-4">Our Mission</h2>
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 mt-4 md:mt-0">
+          <img src="https://media.istockphoto.com/id/637854036/photo/burning-the-midnight-oil.jpg?s=612x612&w=0&k=20&c=p_Bd7f3E0qRFpcCT2n4WAiOtyd6z2vDN2trHz1oQX4U=" alt="Journalists" class="w-full rounded-lg shadow-md">
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold mb-4 md:ml-8 mt-8 md:mt-0">Inform, Inspire, Empower</h3>
+          <p class="text-lg mb-4 text-gray-700 md:ml-8">Our mission is to inform, inspire, and empower individuals through reliable news and inspiring stories. We believe in the power of knowledge to create positive change in society. We strive to provide accurate and unbiased information across various topics, fostering meaningful conversations and promoting transparency.</p>
+          <p class="text-lg mb-4 text-gray-700 md:ml-8">Through our content, we aim to inspire our readers and encourage them to take action, whether it's pursuing their passions, making informed decisions, or engaging in their communities. We believe in the potential of every individual to make a difference, and we're here to support and empower them on their journey.</p>
+         
+        </div>
+       
+      </div>
+    </section>
+    
+  </div>
+
+  <footer class="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+    <!--Footer content-->
+    <div id="footer-content" class="relative pt-8 xl:pt-16 pb-6 xl:pb-12">
+        <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2 overflow-hidden">
+            <div class="flex flex-wrap flex-row lg:justify-between -mx-3">
+                <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
+                    <div class="flex items-center mb-2">
+                        <span class="text-3xl leading-normal mb-2 font-bold text-gray-100 mt-2">Newzy Newzy</span>
+                        <!-- <img src="src/img-min/logo.png" alt="LOGO"> -->
+                    </div>
+                    <p>Stay informed with the latest news and updates.</p>
+
+
+                    <div class="footer-icons space-x-3 mt-6 mb-6 Lg:mb-0">
+                        <a href="#"><i class="fab fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+
+                </div>
+                <div class="flex-shrink max-w-full w-full lg:w-3/5 px-3">
+                    <div class="flex flex-wrap flex-row">
+                        <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
+                            <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Sections</h4>
+                            <ul>
+                                <li class="py-1 hover:text-white"><a href="#">World</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Politics</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Business</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Technology</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Science</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
+                            <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Features</h4>
+                            <ul>
+                                <li class="py-1 hover:text-white"><a href="#">Opinions</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Analysis</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Interviews</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Reviews</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Trending</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
+                            <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Resources</h4>
+                            <ul>
+                                <li class="py-1 hover:text-white"><a href="#">Archives</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Events</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Newsletters</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Podcasts</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Videos</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
+                            <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Legal</h4>
+                            <ul>
+                                <li class="py-1 hover:text-white"><a href="#">Terms of Service</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Privacy Policy</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Cookie Policy</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Disclaimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Start footer copyright-->
+    <div class="footer-dark">
+        <div class="container py-4 border-t border-gray-200 border-opacity-10">
+            <div class="row">
+                <div class="col-12 px-2 md:px-0 col-md text-center">
+                    <p class="d-block my-3">&copy; 2023 Newzy Newzy. All rights reserved. Developed and Designed by Rajkumar Oad.</p>
+                </div>
+            </div>
+        </div>
+    </div><!--End footer copyright-->
+</footer><!-- end footer -->
+
+  
+
+  <script>
+
+var menuButton = document.getElementById('menuButton');
+var menu = document.getElementById('menu');
+
+function toggleMenu() {
+  menu.classList.toggle('hidden');
+  menuButton.classList.toggle('open');
+}
+
+function closeMenu() {
+  menu.classList.add('hidden');
+  menuButton.classList.remove('open');
+}
+
+menuButton.addEventListener('click', toggleMenu);
+
+var menuLinks = document.querySelectorAll('.menu-link');
+var body = document.querySelector('body');
+
+menuLinks.forEach(function(link) {
+  link.addEventListener('click', function() {
+    closeMenu();
+  });
+});
+
+body.addEventListener('click', function(event) {
+  var isMenuClick = menu.contains(event.target);
+  var isButtonMenuClick = menuButton.contains(event.target);
+
+  if (!isMenuClick && !isButtonMenuClick) {
+    closeMenu();
+  }
+});
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+</body>
+
+</html>

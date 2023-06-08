@@ -1,0 +1,138 @@
+.logo {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.hamburger-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 4px;
+}
+
+.open .hamburger-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.open .hamburger-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Add custom styles for the category dropdown */
+select#categoryDropdown {
+  appearance: none;
+  padding-right: 1.5rem;
+}
+
+select#categoryDropdown::-ms-expand {
+  display: none;
+}
+
+select#categoryDropdown option {
+  color: #fff;
+  background-color: #4c51bf;
+}
+
+select#categoryDropdown option:checked {
+  color: #000;
+  background-color: #fff;
+}
+
+
+
+
+.footer-icons {
+  margin-top: 20px;
+}
+
+.footer-icons a {
+  color: white;
+  font-size: 2rem;
+
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #7ed6df;
+}
+
+footer a:hover {
+  color: #7ed6df;
+}
+
+#loadingBar {
+  width: 0;
+  animation: loadingAnimation 2s infinite;
+  box-sizing: border-box; /* Add this line */
+}
+
+@keyframes loadingAnimation {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+#loadingSpinner {
+  display: none;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #6EE7B7;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #6EE7B7 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+.active {
+  background-color: #2563eb;
+  color: white;
+}

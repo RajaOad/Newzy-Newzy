@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title>Home - NewzyNewzy.com</title>
+  <meta name="description" content="NewzyNewzy.com is your ultimate destination for breaking news and inspiring stories.">
+
+  <!-- Development css -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="news.css">
+
+  <!-- Production css -->
+  <!-- <link rel="stylesheet" href="dist/css/style.css"> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Favicon  -->
+  <link rel="icon" href="favicon.png">
+
+  <style>
+    #cardContainer2, #cardContainer3, #cardContainer4 {
+  justify-content: space-evenly;
+}
+
+.carousel-card {
+  height: 350px;
+margin-bottom: 32px;
+}
+.carousel-card img{
+  height: 200px;
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="bg-gradient-to-r from-blue-500 to-purple-500 z-50 fixed w-full top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0">
+          <span class="text-white logo">Newzy Newzy</span>
+        </div>
+        <div class="lg:hidden">
+          <button id="menuButton" type="button" class="text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 p-2 rounded-md">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+        <div class="hidden lg:block">
+  
+          <div class="ml-10 flex items-center space-x-4">
+            <a href="#" class="active text-white hover:bg-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="news.html" class="text-white hover:bg-blue-600 px-3 py-2 rounded-md text-sm font-medium">Latest News</a>
+            <a href="news.html" class="text-white hover:bg-blue-600 px-3 py-2 rounded-md text-sm font-medium">More News</a>
+           
+            <a href="about.html" class="text-white hover:bg-blue-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+  
+        
+  
+            <!-- Add other category links here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:hidden hidden pb-4" id="menu">
+      <a href="#"  class=" active block text-white hover:bg-blue-600 px-3 py-2 rounded-md text-base font-medium menu-link">Home</a>
+      <a href="news.html" class="block text-white hover:bg-blue-600 px-3 py-2 rounded-md text-base font-medium menu-link">Latest News</a>
+  
+   
+      <a href="news.html" data-category="world" class="block text-white hover:bg-blue-600 px-3 py-2 rounded-md text-base font-medium menu-link">More news</a>
+      <a href="about.html" class="block text-white hover:bg-blue-600 px-3 py-2 rounded-md text-base font-medium menu-link">About</a>
+
+    </div>
+  </nav>
+
+ 
+
+  <div id="loadingIndicator" class=" z-50 fixed top-0 left-0 right-0 h-2 bg-white">
+    <div id="loadingBar" class="h-full bg-blue-600"></div>
+  </div>
+
+  <div id="welcomeModal" class=" mt-20 mx-2 md:mx-44 md:mt-40 fixed inset-0 flex items-center justify-center z-50 hidden">
+    <div class="bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg p-8 shadow-lg">
+      <h2 class="text-3xl font-bold mb-8 text-center text-white">Welcome to Newzy Newzy - Your Source for Breaking News and Inspiring Stories!</h2>
+      <!-- <img src="path/to/your/logo.png" alt="Logo" class="mx-auto mb-4"> -->
+      <p class="text-center text-white">We're your go-to destination for breaking news and inspiring stories. Stay informed and inspired as we bring you the latest updates, captivating articles, and thought-provoking content.</p>
+      <button id="closeModalButton" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">
+        Close
+      </button>
+    </div>
+  </div>
+
+
+
+
+<!-- hero big grid -->
+<div class="bg-white py-6 mt-20">
+    <div id="topContainer" class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+      <!-- big grid 1 -->
+      
+    </div>
+  </div>
+ 
+  <div id="loadingSpinner" class="text-center mt-20">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+  
+  <!-- block news -->
+
+  <div class="bg-white">
+    <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+      <div class="flex flex-row flex-wrap">
+        <!-- Left -->
+        <div class="flex-shrink max-w-full w-full lg:w-2/3 overflow-hidden">
+          <div class="w-full py-3">
+            <h2 class="text-gray-800 text-2xl font-bold">
+              <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Top News
+            </h2>
+          </div>
+          <div id="cardContainer" class="flex flex-row flex-wrap -mx-3">
+           
+          </div>
+        </div>
+        <!-- right -->
+        <div class="flex-shrink max-w-full w-full lg:w-1/3 lg:pl-8 lg:pt-14 lg:pb-8 order-first lg:order-last">
+          <div class="w-full bg-gray-50 h-full" style="position: relative;">
+            <div class="text-sm py-6" style="position: static; left: auto; width: 323px;">
+              <div class="w-full text-center">
+                <a class="uppercase" href="#">Advertisement</a>
+                <a href="#">
+                  <img class="mx-auto" src="250.jpg" alt="advertisement area" y5fqvgu6d="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- slider news -->
+  <div class="relative bg-gray-50" style="background-image: url('src/img/bg.jpg');background-size: cover;background-position: center center;background-attachment: fixed">
+    <div class="bg-gradient-to-r from-purple-500 to-blue-500 bg-opacity-70">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="flex flex-row flex-wrap">
+          <div class="flex-shrink max-w-full w-full py-12 overflow-hidden">
+            <div class="w-full py-3">
+              <h2 class="text-white text-2xl font-bold text-shadow-black">
+                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Tech
+              </h2>
+            </div>
+            <div id="post-carousel" class="splide post-carousel">
+              <div class="splide__track">
+                <ul class="splide__list">
+
+                  <li class="splide__slide">
+                      <div class="w-full pb-3">
+                        <div class="hover-img bg-white carousel-card">
+                          <a href="https://en.dailypakistan.com.pk/06-Jun-2023/vision-pro-apple-s-first-significant-product-in-8-years-unveiled" target="_blank">
+                            <img class="max-w-full w-full mx-auto" src="https://en.dailypakistan.com.pk/digital_images/large/2023-06-06/vision-pro-apple-s-first-significant-product-in-8-years-unveiled-1686069590-9514.jpg" alt="alt title">
+                          </a>
+                          <div class="py-3 px-6">
+                            <h3 class="text-lg font-bold leading-tight mb-2">
+                              <a href="https://en.dailypakistan.com.pk/06-Jun-2023/vision-pro-apple-s-first-significant-product-in-8-years-unveiled" target="_blank">'Vision Pro': Apple's first significant product in 8 years unveiled</a>
+                            </h3>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>dailypakistanen</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  <li class="splide__slide">
+                      <div class="w-full pb-3">
+                        <div class="hover-img bg-white carousel-card">
+                          <a href="https://en.dailypakistan.com.pk/06-Jun-2023/apple-introduces-new-os-for-iphones-which-models-are-not-getting-the-update" target="_blank">
+                            <img class="max-w-full w-full mx-auto" src="https://en.dailypakistan.com.pk/digital_images/large/2023-06-06/1686066960-5130.jpg" alt="alt title">
+                          </a>
+                          <div class="py-3 px-6">
+                            <h3 class="text-lg font-bold leading-tight mb-2">
+                              <a href="https://en.dailypakistan.com.pk/06-Jun-2023/apple-introduces-new-os-for-iphones-which-models-are-not-getting-the-update" target="_blank">Apple introduces new OS for iPhones – here's the models that are not getting the update</a>
+                            </h3>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>dailypakistanen</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="w-full pb-3">
+                        <div class="hover-img bg-white carousel-card">
+                          <a href="https://www.samaaenglish.tv/news/40038070/tech-apple-introduces-new-15-inch-macbook-air" target="_blank">
+                            <img class="max-w-full w-full mx-auto" src="https://i.samaaenglish.tv/large/2023/06/06221421abe679b.jpg?r=221609" alt="alt title">
+                          </a>
+                          <div class="py-3 px-6">
+                            <h3 class="text-lg font-bold leading-tight mb-2">
+                              <a href="https://www.samaaenglish.tv/news/40038070/tech-apple-introduces-new-15-inch-macbook-air" target="_blank">Apple introduces new 15-Inch MacBook Air</a>
+                            </h3>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>samaaenglish</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="w-full pb-3">
+                        <div class="hover-img bg-white carousel-card">
+                          <a href="https://www.samaaenglish.tv/news/40038051/tech-watchos-10-revolutionizes-apple-watch-experience-with-exciting-updates" target="_blank">
+                            <img class="max-w-full w-full mx-auto" src="https://i.samaaenglish.tv/large/2023/06/06200258db4a6db.jpg?r=200800" alt="alt title">
+                          </a>
+                          <div class="py-3 px-6">
+                            <h3 class="text-lg font-bold leading-tight mb-2">
+                              <a href="https://www.samaaenglish.tv/news/40038051/tech-watchos-10-revolutionizes-apple-watch-experience-with-exciting-updates" target="_blank">WatchOS 10 revolutionizes Apple Watch experience with exciting updates</a>
+                            </h3>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>samaaenglish</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+               
+                   
+                  
+             
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  
+
+  <!-- block news -->
+
+  <div class="bg-white py-6">
+    <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+      <div class="flex flex-row flex-wrap">
+        <div class="flex-shrink max-w-full w-full overflow-hidden">
+          <div class="w-full py-3">
+            <h2 class="text-gray-800 text-2xl font-bold">
+              <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>World
+            </h2>
+          </div>
+          <div id="cardContainer2" class="flex justify-evenly flex-row flex-wrap -mx-3">
+       
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- block news -->
+
+  <div class="bg-gray-50 py-6">
+    <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+      <div class="flex flex-row flex-wrap">
+        <!-- post -->
+        <div class="flex-shrink max-w-full w-full lg:w-2/3 overflow-hidden">
+          <div class="w-full py-3">
+            <h2 class="text-gray-800 text-2xl font-bold">
+              <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Entertainment
+            </h2>
+          </div>
+          <div id="cardContainer3" class="flex flex-row flex-wrap -mx-3">
+            <div id="topCard" class="flex-shrink max-w-full w-full px-3 pb-5">
+              
+            </div>
+
+         
+          </div>
+        </div>
+        <!-- sidebar -->
+        <div class="flex-shrink max-w-full w-full lg:w-1/3 lg:pr-8 lg:pt-14 lg:pb-8 order-first" style="position: relative;">
+          <div class="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white">
+            <div class="mb-6">
+              <div class="p-4 bg-gradient-to-r from-purple-700 to-blue-700">
+                <h2 class="text-lg font-bold">Most Popular</h2>
+              </div>
+              <ul id="newsList">
+               
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-sm py-6" style="position: static; left: auto; width: 315px;">
+            <div class="w-full text-center">
+              <a class="uppercase" href="#">Advertisement</a>
+              <a href="#">
+                <img class="mx-auto" src="250.jpg" alt="advertisement area" b3i67j8zu="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- block news -->
+
+  <div class="bg-gray-50 py-6">
+    <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+      <div class="flex flex-row flex-wrap">
+        <!-- Left -->
+        <div class="flex-shrink max-w-full w-full lg:w-2/3  overflow-hidden">
+          <div class="w-full py-3">
+            <h2 class="text-gray-800 text-2xl font-bold">
+              <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Technology
+            </h2>
+          </div>
+          <div id="cardContainer4" class="flex flex-row flex-wrap -mx-3">
+            <div id="topCard2" class="flex-shrink max-w-full w-full px-3 pb-5">
+             
+            </div>
+
+            
+
+          </div>
+        </div>
+        <!-- right -->
+        <div class="flex-shrink max-w-full w-full lg:w-1/3 lg:pl-8 lg:pt-14 lg:pb-8 order-first lg:order-last" style="position: relative;">
+          <div class="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white">
+            <div class="mb-6">
+              <div class="p-4 bg-gradient-to-r from-purple-700 to-blue-700">
+                <h2 class="text-lg font-bold">Most Popular</h2>
+              </div>
+              <ul id="newsList2">
+               
+          
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-sm py-6" style="position: static; left: auto; width: 315px;">
+            <div class="w-full text-center">
+              <a class="uppercase" href="#">Advertisement</a>
+              <a href="#">
+                <img class="mx-auto" src="250.jpg" alt="advertisement area" b3i67j8zu="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- block news -->
+
+  <div class="bg-white py-6">
+    <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+      <div class="flex flex-row flex-wrap">
+        <div class="flex-shrink max-w-full w-full overflow-hidden">
+          <div class="w-full py-3">
+            <h2 class="text-gray-800 text-2xl font-bold">
+              <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Sports
+            </h2>
+          </div>
+          <div id="cardContainer5" class="flex justify-evenly flex-row flex-wrap -mx-3">
+       
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+    <!--Footer content-->
+    <div id="footer-content" class="relative pt-8 xl:pt-16 pb-6 xl:pb-12">
+        <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2 overflow-hidden">
+            <div class="flex flex-wrap flex-row lg:justify-between -mx-3">
+                <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
+                    <div class="flex items-center mb-2">
+                        <span class="text-3xl leading-normal mb-2 font-bold text-gray-100 mt-2">Newzy Newzy</span>
+                        <!-- <img src="src/img-min/logo.png" alt="LOGO"> -->
+                    </div>
+                    <p>Stay informed with the latest news and updates.</p>
+
+
+                    <div class="footer-icons space-x-3 mt-6 mb-6 Lg:mb-0">
+                        <a href="about.html"><i class="fab fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+
+                </div>
+                <div class="flex-shrink max-w-full w-full lg:w-3/5 px-3">
+                    <div class="flex flex-wrap flex-row">
+                        <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
+                            <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Sections</h4>
+                            <ul>
+                                <li class="py-1 hover:text-white"><a href="#">World</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Politics</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Business</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Technology</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Science</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
+                            <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Features</h4>
+                            <ul>
+                                <li class="py-1 hover:text-white"><a href="#">Opinions</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Analysis</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Interviews</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Reviews</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Trending</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
+                            <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Resources</h4>
+                            <ul>
+                                <li class="py-1 hover:text-white"><a href="#">Archives</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Events</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Newsletters</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Podcasts</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Videos</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
+                            <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Legal</h4>
+                            <ul>
+                                <li class="py-1 hover:text-white"><a href="#">Terms of Service</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Privacy Policy</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Cookie Policy</a></li>
+                                <li class="py-1 hover:text-white"><a href="#">Disclaimer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Start footer copyright-->
+    <div class="footer-dark">
+        <div class="container py-4 border-t border-gray-200 border-opacity-10">
+            <div class="row">
+                <div class="col-12 px-2 md:px-0 col-md text-center">
+                    <p class="d-block my-3">&copy; 2023 Newzy Newzy. All rights reserved. Developed and Designed by Rajkumar Oad.</p>
+                </div>
+            </div>
+        </div>
+    </div><!--End footer copyright-->
+</footer><!-- end footer -->
+
+
+
+  <a href="#" class="back-top fixed p-4 rounded bg-gradient-to-r from-blue-500 to-purple-500 z-50 border border-gray-100 text-white dark:bg-gray-900 dark:border-gray-800 right-4 bottom-4 hidden" aria-label="Scroll To Top">
+    <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+      <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path>
+    </svg>
+  </a>
+
+     <!--Vendor js-->
+  <script src="hc-sticky.js"></script>
+  <script src="glightbox.min.js"></script>
+  <script src="splide.min.js"></script>
+  <script src="splide-extension-video.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  
+  <!-- Start development js -->
+  <script src="theme.js"></script>
+  <script src="scripthome.js"></script>
+  <!-- End development js -->
+
+  <!-- Production js -->
+  <!-- <script src="dist/js/scripts.js"></script> -->
+</body>
+</html>
