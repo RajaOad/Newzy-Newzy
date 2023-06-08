@@ -1,0 +1,1 @@
+window.MY_API_KEY = 'pub_24014699004815b7b4e1318d93e8897183ede';
