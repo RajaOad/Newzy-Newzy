@@ -21,7 +21,7 @@ let category2 = 'world';
 let category3 = 'entertainment';
 let category4 = 'technology';
 let category5 = 'sports';
-const apiKey = window.MY_API_KEY;
+const apiKey = window.API_KEY_1;
 let isLoading = false;
 
 function showLoadingIndicator() {
