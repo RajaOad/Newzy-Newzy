@@ -215,7 +215,7 @@ function getCategoryText(category) {
 
 const country = 'pk';
 let category = 'top';
-const apiKey = 'pub_24014699004815b7b4e1318d93e8897183ede';
+const apiKey = window.MY_API_KEY;
 
 
 function updateNews() {
