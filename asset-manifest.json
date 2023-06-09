@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/RajaOad/Reactapp/static/css/main.964095c0.css",
+    "main.js": "/RajaOad/Reactapp/static/js/main.2f5dfe4e.js",
+    "static/js/787.2f5cd38d.chunk.js": "/RajaOad/Reactapp/static/js/787.2f5cd38d.chunk.js",
+    "index.html": "/RajaOad/Reactapp/index.html",
+    "main.964095c0.css.map": "/RajaOad/Reactapp/static/css/main.964095c0.css.map",
+    "main.2f5dfe4e.js.map": "/RajaOad/Reactapp/static/js/main.2f5dfe4e.js.map",
+    "787.2f5cd38d.chunk.js.map": "/RajaOad/Reactapp/static/js/787.2f5cd38d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964095c0.css",
+    "static/js/main.2f5dfe4e.js"
+  ]
+}
