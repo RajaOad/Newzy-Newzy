@@ -1,0 +1,31 @@
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .dummy-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .logo-text {
+    font-family: Arial;
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dummy-image-container:hover {
+    transform: scale(1.1);
+  }
+  
