@@ -173,7 +173,7 @@ categoryLinks.forEach(function (link) {
 
 function updateTitle(category) {
   const categoryText = getCategoryText(category);
-  pageTitle.textContent = `${categoryText} - newzynewzy.site`;
+  pageTitle.textContent = `${categoryText} - NewzyNewzy.site`;
   heading.textContent = `${categoryText} News`;
 }
 
